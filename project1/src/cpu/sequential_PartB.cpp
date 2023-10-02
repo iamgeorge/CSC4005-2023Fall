@@ -24,8 +24,8 @@ int main(int argc, char** argv)
     //     std::cerr << "Invalid argument, should be: ./executable /path/to/input/jpeg /path/to/output/jpeg\n";
     //     return -1;
     // }
-    argv[1] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/20K-RGB.jpg");
-    argv[2] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/Lena-smooth.jpg");
+    argv[1] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/20K-RGB-Benchmark-Image.jpg");
+    argv[2] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/20K-RGB-Benchmark-Image-Smoothed-sequential.jpg");
     argc = 3;
     // Read input JPEG image
     const char* input_filename = argv[1];
