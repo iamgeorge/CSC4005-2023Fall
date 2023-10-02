@@ -12,11 +12,14 @@
 
 int main(int argc, char** argv) {
     // Verify input argument format
-    if (argc != 3) {
-        std::cerr << "Invalid argument, should be: ./executable /path/to/input/jpeg /path/to/output/jpeg\n";
-        return -1;
-    }
+    // if (argc != 3) {
+    //     std::cerr << "Invalid argument, should be: ./executable /path/to/input/jpeg /path/to/output/jpeg\n";
+    //     return -1;
+    // }
     // Read input JPEG image
+    argv[1] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/20K-RGB.jpg");
+    argv[2] = const_cast<char*>("/home/george/src/CSC4005-2023Fall/project1/images/20K-Gray.jpg");
+    argc = 3;
     const char* input_filepath = argv[1];
     std::cout << "Input file from: " << input_filepath << "\n";
     auto input_jpeg = read_from_jpeg(input_filepath);
